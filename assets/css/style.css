@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    background: #912AC0;
+}
+
+.heading {
+    display: block;
+    margin: auto;
+    width: 50em;
+    position: relative;
+}
+
+#trivia {
+    display: block;
+    margin: auto;
+    width: 50em;
+}
+
+p {
+    font-size: 2em;
+    font-family: 'Kaushan Script', cursive;
+    position: absolute;
+    margin-top: 9em;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.main {
+    margin: auto;
+    color: #EDE01C;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1em;
+    text-align: center;
+    width: 50em;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.time {
+    margin: auto;
+    color: #EDE01C;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2em;
+    text-align: center;
+}
+
+button {
+    width: 50%;
+    margin: auto;
+    font-size: 40px;
+    background: #912AC0;
+    color: inherit;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.answerChoices:hover {
+    background: #4D147E !important;
+}
