@@ -2,7 +2,7 @@
 var corr = 0;
 var wrg = 0;
 var inc = 0;
-var totalQuests = 20;
+var totalQuests = 5;
 var time = 0;
 var randomQuest, intervalId;
 var right = false;
@@ -18,7 +18,7 @@ $(document).ready(function(){
 	$(".answer").hide();
 	$(".gameOver").hide();
 	$(".qAndA").show();
-	time = 20;
+	time = 10;
 	// picks random question
 	randomQuest = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length + 1)];
 	// push answers to own array and shuffle
@@ -37,8 +37,8 @@ $(document).ready(function(){
 	    $(".multiChoice").append(choices);
 	    if (answerButtons[i] === randomQuest.correct) {
 		choices.addClass("correct");
-	    } else {
-		choices.addClass("notRight");
+	   // } else {
+	//	choices.addClass("notRight");
 	    }
 	};
 	intervalId = setInterval(decrease, 1000);
@@ -58,8 +58,8 @@ $(document).ready(function(){
 	}
     };
 
-    $(".answerChoices").click(function() {
-	if ($(".answerChoices").hasClass("correct") === randomQuest.correct) {
+    $(document).on("click",".answerChoices", function() {
+	if ($(this).hasClass("correct")) {
 	    corr++;
 	    totalQuests--;
 	    $(".blank").html("correct!");
@@ -76,17 +76,34 @@ $(document).ready(function(){
     function showAnswer() {
 	// hide question
 	$(".qAndA").hide();
-	$(".answerChoices").remove();
-//	answerButtons = [];
+	$(".multiChoice").empty();
+	answerButtons = [];
 	// show answer div
 	$(".answer").show();
 	// add src to  <img>
+	$(".answerIs").html("The answer is: " + randomQuest.correct);
 	$(".imgAnswer").attr("src", randomQuest.imgUrl);
 	// stop timer
 	clearInterval(intervalId);
 	// set timeOut to 5 seconds then show next question
 	setTimeout (function() {
-	    play();
-	}, 5000);
+	   gameOver();
+	}, 3000);
     };
+
+    function gameOver() {
+	if (totalQuests === 0) {
+	    $(".answer").hide();
+	    $(".gameOver").show();
+	    $("#correct").html(corr);
+	    $("#wrong").html(wrg);
+	    $("#incomplete").html(inc);
+	} else {
+	    play();
+	}
+    }
+
+    $(".reset").click(function() {
+	location.reload();
+    });
 });
