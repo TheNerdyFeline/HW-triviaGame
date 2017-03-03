@@ -20,77 +20,80 @@ Sleeping Beauty, Mary Poppins, Parent Trap
 7 "What name did Princess Aurora use to hide her identity while living in the cottage in the woods?" "Briar Rose",
 "Flora Rose", "Sweet Briar Rose", "Sweet Briar" 
 
-8 "What author wrote the book that the animated feature The Jungle Book is based on?" "Rudyard Kipling",
-"Hans Christian Andersen", "A.A. Milne", "Lewis Carroll"
+8 "What author wrote the book that the animated feature The Jungle Book is based on?", "Rudyard Kipling",
+"Hans Christian Andersen", "A.A. Milne", "Lewis Carroll", "./assets/images/"
 
-9 When does Mary Poppins say she will leave the Banks’ house? When the Wind Changes
-When the season changes After the holidays End of the year
+9 "When does Mary Poppins say she will leave the Banks’ house?", "When the Wind Changes", 
+"When the season changes", "After the holidays", "End of the year", "./assets/images/"
 
-10 What Disney movie takes place in India? The Jungle Book
-Aladdin Tangled Treasure Island
+10 "What Disney movie takes place in India?", "The Jungle Book",
+"Aladdin", "Tangled", "Treasure Island", "./assets/images/"
 
-11 Which two Disney princesses featured red hair? Ariel and Merida
-Repunzel and Ariel Belle and Merida Aurora and Snow White
+11 "Which two Disney princesses featured red hair?", "Ariel and Merida",
+"Repunzel and Ariel", "Belle and Merida", "Aurora and Snow White", "./assets/images/"
 
-12 Which princess has her mother alive, but her father is dead? Tiana
-Aurora Rapunzel Elsa
+12 "Which princess has her mother alive, but her father is dead?", "Tiana",
+"Aurora", "Rapunzel", "Elsa", "./assets/images/"
 
-13 In the Lion King, where does Mufasa and his family live? Pride Rock
-Tree of Life Africa The Outlands
+13 "In the Lion King, where does Mufasa and his family live?", "Pride Rock",
+"Tree of Life", "The Desert", "The Outlands", "./assets/images/"
 
-14 What is the name of the boy who owns Buzz Lightyear in the movie Toy Story? Andy
-Sid Lenny Steve
+14 "What is the name of the boy who owns Buzz Lightyear in the movie Toy Story?", "Andy",
+"Sid", "Lenny", "Steve", "./assets/images/"
 
-15 In the movie Frozen, which song does Elsa sing as she builds the castle? Let it Go
-When Will My Life Begin In Summer Do you want to build a Snowman
+15 "In the movie Frozen, which song does Elsa sing as she builds the castle?", "Let it Go",
+"When Will My Life Begin?", "In Summer", "Do you want to build a Snowman?", "./assets/images/"
 
-16 In the movie Finding Nemo, which country has Nemo been taken to? Australia
-England Africa Pacific Coast
+16 "In the movie Finding Nemo, which country has Nemo been taken to?", "Australia",
+"England", "Africa", "Pacific Coast', "./assets/images/"
 
-17 In which Disney movie is Hopper a villain? A Bug's Life
-Ants The Jungle Book Zootopia
+17 "In which Disney movie is Hopper a villain?", "A Bug's Life",
+"Ants", "The Jungle Book", "Zootopia"
 
-18 In which city is the Disney movie Ratatouille based? Paris
-London Marseille Sydney
+18 "In which city is the Disney movie Ratatouille based?", "Paris",
+"London", "Marseille", "Sydney", "./assets/images/"
 
-19 Which Disney princesses officially became princesses after they were married? Belle, Cinderella, and Tiana
-Cinderella and Belle, Tiana Aurora and Merida, Snow White and Mulan
+19 "Which Disney princesses officially became princesses after they were married?", "Belle, Cinderella, and Tiana",
+"Cinderella and Belle", "Tiana Aurora and Merida", "Snow White and Mulan", "./assets/images/"
 
-20 In Beauty and the Beast, how many eggs does Gaston eat for breakfast? 5 Dozen
-12, 2 dozen, 36
+20 "In Beauty and the Beast, how many eggs does Gaston eat for breakfast?", "5 Dozen",
+"12", "2 dozen", "36", "./assets/images/"
 
-21 During the battle with Aladdin, what type of animal does Jafar transform himself into? Cobra
-Tiger Bear Lion
+21 "During the battle with Aladdin, what type of animal does Jafar transform himself into?", "Cobra",
+"Tiger", "Bear", "Lion", "./assets/images/"
 
-22 What do Aladdin and his monkey Abu steal from the marketplace when you’re first introduced to them in the movie? Loaf of Bread
-Apple Cheese Fish
+22 "What do Aladdin and his monkey Abu steal from the marketplace when you’re first introduced to them in the movie?", "Loaf of Bread",
+"Apple", "Cheese", "Fish", "./assets/images/"
 
-22 What popular Disney character makes an appearance as a stuffed animal in Frozen? Mickey Mouse
-Whinnie the Pooh Goofy Donald Duck
+22 "What popular Disney character makes an appearance as a stuffed animal in Frozen?", "Mickey Mouse",
+"Whinnie the Pooh", "Goofy", "Donald Duck", "./assets/images/"
 
-23 After being on earth, where did Hercules first meet his father Zeus? Temple of Zeus
-Atlantis City, Olympus Coliseum, Prometheus Academy
+23 "After being on earth, where did Hercules first meet his father Zeus?", "Temple of Zeus",
+ "Atlantis City", "Olympus Coliseum", "Prometheus Academy", "./assets/images/"
 
-25 In Toy Story, what game does the slinky play? Checkers
-Go Fish, Candyland, jenga
+24 "Which is the only Disney animated film with a main character that doesn’t speak?", "Dumbo",
+"Tanlged", "Fantasia", "101 Dalmations", "Lady and the Tramp","./assets/images/dumbo.jpg" 
 
-26 In Mary Poppins, what animal was on the end of Mary Poppins’ umbrella that spoke? A Parrot
-cat, lizard, snake
+25 "In Toy Story, what game does the slinky play?", "Checkers",
+"Go Fish", "Candyland", "jenga", "./assets/images/checkers.jpg"
 
-27 What is the name of Donald Duck’s sister? Dumbella
-Danna Daphne Daffodil
+26 "In Mary Poppins, what animal was on the end of Mary Poppins’ umbrella that spoke?", "Parrot",
+"Cat", "Lizard", "Snake", "./assets/images/poppins-parrot.jpg"
 
-28 What was the first fairy tale that Walt Disney made a cartoon about? Little Red Riding Hood
-Snow White, The Ugle Duckling, Pinnochio
+27 "What is the name of Donald Duck’s sister?", "Dumbella",
+"Danna", "Daphne", "Daffodil", ".assets/images/dumbella.jpg"
 
-29 In Hercules, Hades promised not to harm Megara provided that Hercules give up his strength. How long did he have to agree to give up his strength for? 24 Hours
-Forever 12 hours 1 Week
+28 "What was the first fairy tale that Walt Disney made a cartoon about?", "Little Red Riding Hood",
+"Snow White", "The Ugle Duckling", "Pinnochio", ".assets/images/little-red-riding-hood.jpg
 
-30 What actor provided the voice of Lumiere in Beauty & the Beast? Jerry Orbach
-Robby Benson, Jesse Corti, Bradley Pierce
+29 "In Hercules, Hades promised not to harm Megara provided that Hercules give up his strength. How long did he have to agree to give up his strength for?", "24 Hours",
+"Forever", "12 hours", "1 Week",  ".assets/images/hercules.jpg"
 
-31 What is the name of the original novel that inspired the full length feature animation, The Hunchback of Notre Dame? Notre Dame de Paris
-Hunhback of Notre Dame, The Hunchback, The Bell Keeper
+30 "What actor provided the voice of Lumiere in Beauty & the Beast?", "Jerry Orbach",
+"Robby Benson", "Jesse Corti", "Bradley Pierce",  ".assets/images/jerry-lumiere.jpg"
+
+31 "What is the name of the original novel that inspired the full length feature animation, The Hunchback of Notre Dame?", "Notre Dame de Paris",
+"The Huncback of Notre Dame", "The Hunchback", "The Bell Keeper", ".assets/images/"
 
 32 In what full length animated feature would you find a villain named Sykes? Oliver and Company
 Aristocats, Lady and the Tramp, The Rescuers

@@ -2,10 +2,9 @@
 var corr = 0;
 var wrg = 0;
 var inc = 0;
-var totalQuests = 5;
+var totalQuests = 10;
 var time = 0;
 var randomQuest, intervalId;
-var right = false;
 var answerButtons = [];
 
 // gameOver function/else thing
@@ -20,7 +19,7 @@ $(document).ready(function(){
 	$(".qAndA").show();
 	time = 10;
 	// picks random question
-	randomQuest = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length + 1)];
+	randomQuest = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length - 1)];
 	// push answers to own array and shuffle
 	answerButtons.push(randomQuest.correct, randomQuest.a , randomQuest.b, randomQuest.c);
 	answerButtons.sort(function(a, b){
@@ -103,7 +102,17 @@ $(document).ready(function(){
 	}
     }
 
+    function restart() {
+	corr = 0;
+	wrg = 0;
+	inc = 0;
+	totalQuests = 10;
+	time = 0;
+	answerButtons = [];
+	play();
+    }
+
     $(".reset").click(function() {
-	location.reload();
+	restart();
     });
 });
