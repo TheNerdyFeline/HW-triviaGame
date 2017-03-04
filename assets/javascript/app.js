@@ -7,7 +7,8 @@ var time = 0;
 var intervalId, currentQuest;
 var answerButtons = [];
 var newQuests = [];
-// function that shuffles question array and splices first totalQuests
+
+
 // wait til page loads
 $(document).ready(function(){
     newQuiz();
@@ -63,7 +64,7 @@ $(document).ready(function(){
 	}
     };
 
-    // generate new set of questions to avoid repeats
+    // function that shuffles question array and splices first totalQuests
     function newQuiz() {
 	triviaQuestions.sort(function(a, b){
 	return 0.5 - Math.random();
