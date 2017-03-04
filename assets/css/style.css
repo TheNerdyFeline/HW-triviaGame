@@ -30,13 +30,13 @@ p {
     margin: auto;
     color: #EDE01C;
     font-family: 'Kaushan Script', cursive;
-    font-size: 1em;
+    font-size: 2em;
     text-align: center;
-    width: 50em;
+    width: 30em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: normal;
 }
 
@@ -56,8 +56,13 @@ button {
     color: inherit;
     margin: 10px;
     border: 1px solid black;
+    font-family: 'Kaushan Script', cursive;
 }
 
-.answerChoices:hover {
+button:hover {
     background: #4D147E !important;
+}
+
+.imgAnswer {
+    width: 400px;
 }

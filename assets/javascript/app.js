@@ -2,43 +2,49 @@
 var corr = 0;
 var wrg = 0;
 var inc = 0;
-var totalQuests = 20;
+var totalQuests = 10;
 var time = 0;
-var randomQuest, intervalId;
-var right = false;
+var intervalId, currentQuest;
 var answerButtons = [];
+var newQuests = [];
 
-// gameOver function/else thing
-// click function
+
+// wait til page loads
 $(document).ready(function(){
+    newQuiz();
     play();
+
     // function to play game
     function play() {
 	// setup play area
 	$(".answer").hide();
 	$(".gameOver").hide();
 	$(".qAndA").show();
-	time = 20;
-	// picks random question
-	randomQuest = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length + 1)];
+	time = 10;
+	// for loop to generate each question
+	//for (var i = 0; i < newQuests.length; i++) {
+	//	currentQuest = newQuests[i];
+	// need to generate each question one at a time
+	currentQuest = newQuests.pop();
 	// push answers to own array and shuffle
-	answerButtons.push(randomQuest.correct, randomQuest.a , randomQuest.b, randomQuest.c);
+	answerButtons.push(currentQuest.correct, currentQuest.a , currentQuest.b, currentQuest.c);
 	answerButtons.sort(function(a, b){
 	    return 0.5 - Math.random();
 	});
 
+
 	// html q and a's
-	$(".question").html(randomQuest.question);
+	$(".question").html(currentQuest.question);
 	for (var  i = 0; i < answerButtons.length; i++) {
 	    var choices = $("<button>");
 	    choices.addClass("answerChoices");
 	    choices.text(answerButtons[i]);
 	    choices.after($("<br>"));
 	    $(".multiChoice").append(choices);
-	    if (answerButtons[i] === randomQuest.correct) {
+	    if (answerButtons[i] === currentQuest.correct) {
 		choices.addClass("correct");
-	    } else {
-		choices.addClass("notRight");
+	   // } else {
+	//	choices.addClass("notRight");
 	    }
 	};
 	intervalId = setInterval(decrease, 1000);
@@ -58,8 +64,17 @@ $(document).ready(function(){
 	}
     };
 
-    $(".answerChoices").click(function() {
-	if ($(".answerChoices").hasClass("correct") === randomQuest.correct) {
+    // function that shuffles question array and splices first totalQuests
+    function newQuiz() {
+	triviaQuestions.sort(function(a, b){
+	return 0.5 - Math.random();
+	});
+	newQuests = triviaQuestions.slice(0, 10);
+    };
+
+
+    $(document).on("click",".answerChoices", function() {
+	if ($(this).hasClass("correct")) {
 	    corr++;
 	    totalQuests--;
 	    $(".blank").html("correct!");
@@ -76,17 +91,46 @@ $(document).ready(function(){
     function showAnswer() {
 	// hide question
 	$(".qAndA").hide();
-	$(".answerChoices").remove();
-//	answerButtons = [];
+	$(".multiChoice").empty();
+	answerButtons = [];
 	// show answer div
 	$(".answer").show();
 	// add src to  <img>
-	$(".imgAnswer").attr("src", randomQuest.imgUrl);
+	$(".answerIs").html("The answer is: " + currentQuest.correct);
+	$(".imgAnswer").attr("src", currentQuest.imgUrl);
 	// stop timer
 	clearInterval(intervalId);
 	// set timeOut to 5 seconds then show next question
 	setTimeout (function() {
-	    play();
-	}, 5000);
+	   gameOver();
+	}, 3000);
     };
+
+    function gameOver() {
+	if (totalQuests === 0) {
+	    $(".answer").hide();
+	    $(".gameOver").show();
+	    $("#correct").html(corr);
+	    $("#wrong").html(wrg);
+	    $("#incomplete").html(inc);
+	} else {
+	    play();
+	}
+    }
+
+    function restart() {
+	corr = 0;
+	wrg = 0;
+	inc = 0;
+	totalQuests = 10;
+	time = 0;
+	answerButtons = [];
+	newQuiz();
+	play();
+
+    }
+
+    $(".reset").click(function() {
+	restart();
+    });
 });
