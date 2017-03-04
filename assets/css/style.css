@@ -50,7 +50,6 @@ h2 {
 
 button {
     width: 50%;
-    height: 100%;
     margin: auto;
     font-size: 40px;
     background: #912AC0;
@@ -60,7 +59,7 @@ button {
     font-family: 'Kaushan Script', cursive;
 }
 
-.answerChoices:hover {
+button:hover {
     background: #4D147E !important;
 }
 

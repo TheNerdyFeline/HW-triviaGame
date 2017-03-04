@@ -4,13 +4,15 @@ var wrg = 0;
 var inc = 0;
 var totalQuests = 10;
 var time = 0;
-var randomQuest, intervalId;
+var intervalId, currentQuest;
 var answerButtons = [];
-
-// gameOver function/else thing
-// click function
+var newQuests = [];
+// function that shuffles question array and splices first totalQuests
+// wait til page loads
 $(document).ready(function(){
+    newQuiz();
     play();
+
     // function to play game
     function play() {
 	// setup play area
@@ -18,23 +20,27 @@ $(document).ready(function(){
 	$(".gameOver").hide();
 	$(".qAndA").show();
 	time = 10;
-	// picks random question
-	randomQuest = triviaQuestions[Math.floor(Math.random() * triviaQuestions.length - 1)];
+	// for loop to generate each question
+	//for (var i = 0; i < newQuests.length; i++) {
+	//	currentQuest = newQuests[i];
+	// need to generate each question one at a time
+	currentQuest = newQuests.pop();
 	// push answers to own array and shuffle
-	answerButtons.push(randomQuest.correct, randomQuest.a , randomQuest.b, randomQuest.c);
+	answerButtons.push(currentQuest.correct, currentQuest.a , currentQuest.b, currentQuest.c);
 	answerButtons.sort(function(a, b){
 	    return 0.5 - Math.random();
 	});
 
+
 	// html q and a's
-	$(".question").html(randomQuest.question);
+	$(".question").html(currentQuest.question);
 	for (var  i = 0; i < answerButtons.length; i++) {
 	    var choices = $("<button>");
 	    choices.addClass("answerChoices");
 	    choices.text(answerButtons[i]);
 	    choices.after($("<br>"));
 	    $(".multiChoice").append(choices);
-	    if (answerButtons[i] === randomQuest.correct) {
+	    if (answerButtons[i] === currentQuest.correct) {
 		choices.addClass("correct");
 	   // } else {
 	//	choices.addClass("notRight");
@@ -56,6 +62,15 @@ $(document).ready(function(){
 	    showAnswer();
 	}
     };
+
+    // generate new set of questions to avoid repeats
+    function newQuiz() {
+	triviaQuestions.sort(function(a, b){
+	return 0.5 - Math.random();
+	});
+	newQuests = triviaQuestions.slice(0, 10);
+    };
+
 
     $(document).on("click",".answerChoices", function() {
 	if ($(this).hasClass("correct")) {
@@ -80,8 +95,8 @@ $(document).ready(function(){
 	// show answer div
 	$(".answer").show();
 	// add src to  <img>
-	$(".answerIs").html("The answer is: " + randomQuest.correct);
-	$(".imgAnswer").attr("src", randomQuest.imgUrl);
+	$(".answerIs").html("The answer is: " + currentQuest.correct);
+	$(".imgAnswer").attr("src", currentQuest.imgUrl);
 	// stop timer
 	clearInterval(intervalId);
 	// set timeOut to 5 seconds then show next question
@@ -109,7 +124,9 @@ $(document).ready(function(){
 	totalQuests = 10;
 	time = 0;
 	answerButtons = [];
+	newQuiz();
 	play();
+
     }
 
     $(".reset").click(function() {
