@@ -100,7 +100,7 @@ $(document).ready(function(){
 	$(".imgAnswer").attr("src", currentQuest.imgUrl);
 	// stop timer
 	clearInterval(intervalId);
-	// set timeOut to 5 seconds then show next question
+	// set timeOut to 3 seconds then show next question
 	setTimeout (function() {
 	   gameOver();
 	}, 3000);
