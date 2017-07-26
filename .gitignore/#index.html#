@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+3<!DOCTYPE html>
 <html>
-    <head lang="en">
-	<meta charset="UTF-8">
+    <head>
 	<title>Disney Trivia Game</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
@@ -14,16 +13,15 @@
 	    <img src="assets/images/disney-trivia.jpg" id="trivia" alt="trivia">
 	</div> <!-- close heading -->
 	<div class="main">
-	    <h2 class="time">Time Left: <span class="timeLeft"></span></h2>
 	    <div class="qAndA">
 		<h2 class="question"></h2>
 		<div class="multiChoice"></div>
 	    </div> <!-- close qAndA -->
 	    <div class="correctAnswer">
 		<div class="answer">
-		    <h2>You are <span class="blank"></span></h2>
-		    <h2>The answer is: <span class="answerIs"></span></h2>
-		    <span class="imgAns"></span>
+		    <h2 cla>You are <span class="blank"></span></h2>
+		    <h2 class="answerIs"></h2>
+		    <img class="imgAnswer">
 		</div><!-- close answer -->
 	    </div>
 	    <div class="gameOver">
@@ -32,6 +30,8 @@
 		<h2 class="numIncom">Incomplete: <span id="incomplete"></span></h2>
 		<button class="reset">Try Again</button>
 	    </div> <!-- close gameOver -->
+	</div>
+	    <h2 class="time">Time Left: <span class="timeLeft"</span></h2>
 	</div><!-- close main -->
 	<script src="assets/javascript/questions.js" type="text/javascript"></script>
 	<script src="assets/javascript/app.js" type="text/javascript"></script>

@@ -63,6 +63,6 @@ button:hover {
     background: #4D147E !important;
 }
 
-.imgAnswer {
+#ansImg {
     width: 400px;
 }

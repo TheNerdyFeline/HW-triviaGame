@@ -14,7 +14,7 @@ function NewQuestion(question, correct, a, b, c, imgUrl) {
 
 
 var q1 = new NewQuestion("What fearsome animal does Copper battle in the climax of The Fox an The Hound?", "Grizzly Bear", "Wolf", "Coyote", "Dog", "./assets/images/grizzly-bear.jpg");
-var q2 = new NewQuestion("What Dinsey heroine declares, 'When I get home I shall write a book about this place.'?", "Alice", "Repunzel", "Aurora", "Belle", "./assets/images/alice.jpg");
+var q2 = new NewQuestion("What Disney heroine declares, 'When I get home I shall write a book about this place.'?", "Alice", "Repunzel", "Aurora", "Belle", "./assets/images/alice.jpg");
 var q3 = new NewQuestion("In The Sword in the Stone, what does Merlin call The Greatest Force on Earth?", "Love", "Magic", "Knowledge", "Strength", "./assets/images/sword-in-stone.jpg");
 var q4 = new NewQuestion("In Aladdin, what is the name of Jasmine's pet tiger?", "Rajah", "Raj", "Abu", "Iago", "./assets/images/rajah.jpg");
 var q5 = new NewQuestion("Which Disney princesses did not have a love interest in her film?", "Merida and Elsa", "Mulan and Merida", "Tiana and Snow White", "Elsa and Anna", "./assets/images/merida-elsa.jpg");

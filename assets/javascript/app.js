@@ -95,12 +95,17 @@ $(document).ready(function(){
 	answerButtons = [];
 	// show answer div
 	$(".answer").show();
-	// add src to  <img>
-	$(".answerIs").html("The answer is: " + currentQuest.correct);
-	$(".imgAnswer").attr("src", currentQuest.imgUrl);
+	// create img add src and alt to it
+	var ansImg = $("<img>");
+	$(".answerIs").html(currentQuest.correct);
+	$(".imgAns").empty();
+	$(".imgAns").append(ansImg);
+	$(ansImg).attr("src", currentQuest.imgUrl);
+	$(ansImg).attr("alt", "answer");
+	$(ansImg).attr("id", "ansImg");
 	// stop timer
 	clearInterval(intervalId);
-	// set timeOut to 5 seconds then show next question
+	// set timeOut to 3 seconds then show next question
 	setTimeout (function() {
 	   gameOver();
 	}, 3000);
